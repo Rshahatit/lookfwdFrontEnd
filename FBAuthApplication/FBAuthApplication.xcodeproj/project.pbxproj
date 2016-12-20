@@ -26,6 +26,7 @@
 		433DCBD31E08A09800F02E6D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		433DCBD61E08A09800F02E6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		433DCBD81E08A09800F02E6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		433DCBDE1E08B7FD00F02E6D /* FBAuthApplication.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FBAuthApplication.entitlements; sourceTree = "<group>"; };
 		9B587371CC4258EE25E690DD /* Pods-FBAuthApplication.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FBAuthApplication.release.xcconfig"; path = "Pods/Target Support Files/Pods-FBAuthApplication/Pods-FBAuthApplication.release.xcconfig"; sourceTree = "<group>"; };
 		A1C07816ECAA1BF6992D660D /* Pods-FBAuthApplication.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FBAuthApplication.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FBAuthApplication/Pods-FBAuthApplication.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -63,6 +64,7 @@
 		433DCBC81E08A09800F02E6D /* FBAuthApplication */ = {
 			isa = PBXGroup;
 			children = (
+				433DCBDE1E08B7FD00F02E6D /* FBAuthApplication.entitlements */,
 				433DCBC91E08A09800F02E6D /* AppDelegate.swift */,
 				433DCBCB1E08A09800F02E6D /* ViewController.swift */,
 				433DCBCD1E08A09800F02E6D /* Main.storyboard */,
@@ -128,6 +130,11 @@
 						CreatedOnToolsVersion = 8.2;
 						DevelopmentTeam = 32QK2563WV;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -341,6 +348,7 @@
 			baseConfigurationReference = A1C07816ECAA1BF6992D660D /* Pods-FBAuthApplication.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FBAuthApplication/FBAuthApplication.entitlements;
 				DEVELOPMENT_TEAM = 32QK2563WV;
 				INFOPLIST_FILE = FBAuthApplication/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -355,6 +363,7 @@
 			baseConfigurationReference = 9B587371CC4258EE25E690DD /* Pods-FBAuthApplication.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FBAuthApplication/FBAuthApplication.entitlements;
 				DEVELOPMENT_TEAM = 32QK2563WV;
 				INFOPLIST_FILE = FBAuthApplication/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -383,6 +392,7 @@
 				433DCBDD1E08A09800F02E6D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
